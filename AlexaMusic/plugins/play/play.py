@@ -48,13 +48,10 @@ from AlexaMusic import app
 
 async def check_is_joined(message):
     try:
-        [
             InlineKeyboardButton(
                 text="اضغط للأشتراك",
                 url="https://t.me/L_Q7I",
             )
-        ]
-    ]
 )
 
 async def check_is_joined(message):
