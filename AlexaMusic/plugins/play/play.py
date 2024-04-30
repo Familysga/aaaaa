@@ -41,27 +41,14 @@ from AlexaMusic.utils.database import is_served_user
 # Command
 PLAY_COMMAND = get_command("PLAY_COMMAND")
 
-from pyrogram import InlineKeyboardMarkup, InlineKeyboardButton
-
-force_btn = InlineKeyboardMarkup([
-    [InlineKeyboardButton(
-        text="اضغط للأشتراك .",
-        url="t.me/L_Q7I"
-    )]
-])
-
-async def check_is_joined(message):
-    try:
-        userid = message.from_user.id
-        user_name = message.from_user.first_name
-        status = await app.get_chat_member("L_Q7I", userid)
-        return True
-    except Exception as e:
-        await message.reply_text(
-            f'❤️‍🩹┇عزيزي: {message.from_user.mention}\n🫀┇أشتࢪك في قناة البوت أولاً.\n🚧┇قناة البوت: @L_Q7I 🫂',
-            reply_markup=force_btn,
-            disable_web_page_preview=False
-        )
+force_btn = InlineKeyboardMarkup(    [
+        [            InlineKeyboardButton(   
+              text=f"اضغط للأشتراك .", url=f"t.me/L_Q7I",)                                ],        
+    ])
+async def check_is_joined(message):        try:
+        userid = message.from_user.id        user_name = message.from_user.first_name
+        status = await app.get_chat_member("L_Q7I", userid)        return True
+    except Exception:        await message.reply_text(f'❤️‍🩹┇عزيزي: {message.from_user.mention}\n🫀┇أشتࢪك في قناة البوت أولاً.\n🚧┇قناة البوت: @L_Q7I 🫂',reply_markup=force_btn,disable_web_page_preview=False)
         return False
         
 @app.on_message(
