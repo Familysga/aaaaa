@@ -41,13 +41,6 @@ from AlexaMusic.utils.database import is_served_user
 # Command
 PLAY_COMMAND = get_command("PLAY_COMMAND")
 
-from pyrogram import InlineKeyboardMarkup, InlineKeyboardButton
-from pyrogram.errors import UserNotParticipant
-from pyrogram.types import CallbackQuery
-from AlexaMusic import app
-
-# Command
-PLAY_COMMAND = get_command("PLAY_COMMAND")
 
 @app.on_message(
  filters.command(PLAY_COMMAND,"")
