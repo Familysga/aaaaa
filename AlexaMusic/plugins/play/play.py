@@ -46,7 +46,7 @@ from pyrogram.errors import UserNotParticipant
 from pyrogram.types import CallbackQuery
 from AlexaMusic import app
 
-force_btn = InlineKeyboardMarkup(
+async def check_is_joined(
     [
         [
             InlineKeyboardButton(
