@@ -9,7 +9,7 @@ from pyrogram import filters, Client
 
 
 txt = [
-" هآي تع اشب شااي • 😹💔"
+" هآي تع اشرب شااي • 😹💔"
         ]
 @app.on_message(filters.command(["هاي"], ""), group=73)
 
