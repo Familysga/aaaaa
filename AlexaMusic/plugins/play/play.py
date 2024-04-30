@@ -46,7 +46,7 @@ from pyrogram.errors import UserNotParticipant
 from pyrogram.types import CallbackQuery
 from AlexaMusic import app
 
-async def check_is_joined(message)
+async def check_is_joined
         [
             InlineKeyboardButton(
                 text="اضغط للأشتراك",
