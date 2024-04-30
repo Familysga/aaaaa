@@ -46,34 +46,9 @@ from pyrogram.errors import UserNotParticipant
 from pyrogram.types import CallbackQuery
 from AlexaMusic import app
 
-async def check_is_joined(message):
-    try:
-            InlineKeyboardButton(
-                text="اضغط للأشتراك",
-                url="https://t.me/L_Q7I",
-            )
+# Command
+PLAY_COMMAND = get_command("PLAY_COMMAND")
 
-async def check_is_joined(message):
-    try:
-  
-    except Exception as e:
-      
-        # استخدم معرف المستخدم للتحقق مما إذا كان قد اشترك في القناة أم لا
-        user_id = message.from_user.id
-        status = await app.get_chat_member("˹𝙀𝙫𝙖˼", user_id)
-        return True
-    except UserNotParticipant:
-        await message.reply_text(
-            f'عزيزي {message.from_user.mention}\n'
-            f'يرجى الاشتراك في قناة البوت أولاً لاستخدام البوت بشكل كامل.\n'
-            f'˹𝙀𝙫𝙖˼: @L_Q7I',
-            reply_markup=force_btn,
-            disable_web_page_preview=True
-        )
-        return False
-
-app.check_is_joined = check_is_joined
-        
 @app.on_message(
  filters.command(PLAY_COMMAND,"")
     & ~BANNED_USERS)
