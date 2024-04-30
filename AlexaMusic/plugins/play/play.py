@@ -52,7 +52,6 @@ async def check_is_joined(message):
                 text="اضغط للأشتراك",
                 url="https://t.me/L_Q7I",
             )
-)
 
 async def check_is_joined(message):
     try:
