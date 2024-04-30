@@ -1,0 +1,9 @@
+try:
+ 
+    result = some_function()
+except SomeException:
+
+    handle_exception()
+finally:
+
+    cleanup()
