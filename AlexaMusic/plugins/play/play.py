@@ -55,6 +55,9 @@ async def check_is_joined(message):
 
 async def check_is_joined(message):
     try:
+  
+    except Exception as e:
+      
         # استخدم معرف المستخدم للتحقق مما إذا كان قد اشترك في القناة أم لا
         user_id = message.from_user.id
         status = await app.get_chat_member("˹𝙀𝙫𝙖˼", user_id)
