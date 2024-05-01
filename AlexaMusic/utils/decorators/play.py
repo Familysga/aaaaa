@@ -36,6 +36,7 @@ from AlexaMusic.utils.database import (
 )
 from AlexaMusic.utils.database.memorydatabase import is_maintenance
 from AlexaMusic.utils.inline.playlist import botplaylist_markup
+
 links = {}
 
 
@@ -80,7 +81,18 @@ def PlayWrapper(command):
                     caption=_["playlist_1"],
                     reply_markup=InlineKeyboardMarkup(buttons),
                 )
-        
+        if message.sender_chat:
+            upl = InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton(
+                            text="How to Fix this? ",
+                            callback_data="AnonymousAdmin",
+                        ),
+                    ]
+                ]
+            )
+            return await message.reply_text(_["general_4"], reply_markup=upl)
         if message.command[0][0] == "c":
             chat_id = await get_cmode(message.chat.id)
             if chat_id is None:
