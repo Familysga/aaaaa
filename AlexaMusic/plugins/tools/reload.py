@@ -30,7 +30,7 @@ RESTART_COMMAND = get_command("RESTART_COMMAND")
 
 
 @app.on_message(
- filters.command(RELOAD_COMMAND,"")
+ filters.command(RESTART_COMMAND,"")
     & ~BANNED_USERS)
 @language
 async def reload_admin_cache(client, message: Message, _):
