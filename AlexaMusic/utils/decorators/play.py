@@ -1,25 +1,30 @@
-import asyncio
+#
+# Copyright (C) 2021-2022 by Alexa_Help@Github, < https://github.com/Jankarikiduniya >.
+# A Powerful Music Bot Property Of Rocks Indian Largest Chatting Group
 
-from pyrogram.enums import GROUPMemberStatus
-from pyrogram.errors import (
-    GROUPAdminRequired,
-    InviteRequestSent,
-    UserAlreadyParticipant,
-    UserNotParticipant,
-)
+# Kanged By © @Dr_Asad_Ali
+# Rocks © @Shayri_Music_Lovers
+# Owner Asad Ali
+# Harshit Sharma
+# All rights reserved. © Alisha © Alexa © Yukki
+
+
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
+from config import PLAYLIST_IMG_URL, PRIVATE_BOT_MODE, adminlist
+from strings import get_string
 from AlexaMusic import YouTube, app
 from AlexaMusic.misc import SUDOERS
 from AlexaMusic.utils.database import (
-    get_assistant,
     get_cmode,
     get_lang,
     get_playmode,
     get_playtype,
-    is_active_GROUP,
-    is_maintenance,
+    is_active_chat,
+    is_commanddelete_on,
+    is_served_private_chat,
 )
+
 from AlexaMusic.utils.inline import botplaylist_markup
 from config import PLAYLIST_IMG_URL, SUPPORT_GROUP, adminlist
 from strings import get_string
