@@ -53,7 +53,7 @@ def PlayWrapper(command):
                     "**Private Music Bot**\n\nOnly for authorized GROUPs from the owner. Ask my owner to allow your GROUP first."
                 )
                 return await app.leave_GROUP(message.GROUP.id)
-        if await is_commanddelete_on(message.GROUP.id):
+       if await is_commanddelete_on(message.chat.id):
             try:
                 await message.delete()
             except:
