@@ -26,7 +26,7 @@ from dotenv import load_dotenv
 async def bkouqw(client: Client, message: Message):
     await message.reply_photo(
         photo=f"https://telegra.ph/file/ba967503682a55beaedd3.png",
-        caption=f"""**اهلا بك عزيزي {message.from_user.mention} في اصدار سورس زد إي
+        caption=f"""**اهلا بك عزيزي {message.from_user.mention} Alexa في اصدار سورس  
 ★᚜ SOURCE Alexa 𖢎
 
 ★᚜ نوع : ميوزك
