@@ -25,8 +25,6 @@ from AlexaMusic.utils.database import (
     is_maintenance,
     is_nonadmin_chat,
 )
-from config import SUPPORT_CHAT, adminlist, confirmer
-from strings import get_string
 
 from ..formatters import int_to_alpha
 
