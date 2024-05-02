@@ -61,7 +61,7 @@ def PlayWrapper(command):
         url = await YouTube.url(message)
         if message.from_user is not None:
           user_id = message.from_user.id
-           if len(message.command) < 2:
+          if len(message.command) < 2:
                 if "stream" in message.command:
                     return await message.reply_text(_["str_1"])
                 buttons = botplaylist_markup(_)
