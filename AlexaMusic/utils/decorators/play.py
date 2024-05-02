@@ -10,9 +10,9 @@ as you want or you can collabe if you have new ideas.
 """
 import asyncio
 
-from pyrogram.enums import chatMemberStatus
+from pyrogram.enums import ChatMemberStatus
 from pyrogram.errors import (
-    chatAdminRequired,
+    ChatAdminRequired,
     InviteRequestSent,
     UserAlreadyParticipant,
     UserNotParticipant,
