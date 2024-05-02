@@ -10,9 +10,9 @@ as you want or you can collabe if you have new ideas.
 """
 import asyncio
 
-from pyrogram.enums import GROUPMemberStatus
+from pyrogram.enums import ChatMemberStatus
 from pyrogram.errors import (
-    GROUPAdminRequired,
+    ChatAdminRequired,
     InviteRequestSent,
     UserAlreadyParticipant,
     UserNotParticipant,
@@ -30,9 +30,9 @@ from AlexaMusic.utils.database import (
     get_playmode,
     get_assistant,
     get_playtype,
-    is_active_GROUP,
+    is_active_chat,
     is_commanddelete_on,
-    is_served_private_GROUP,
+    is_served_private_chat,
 )
 from AlexaMusic.utils.database.memorydatabase import is_maintenance
 from AlexaMusic.utils.inline.playlist import botplaylist_markup
