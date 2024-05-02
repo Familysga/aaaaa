@@ -121,7 +121,7 @@ def PlayWrapper(command):
             try:
                 try:
                     get = await app.get_chat_member(chat_id, userbot.id)
-              class ChatAdminRequired(Exception):
+             class ChatAdminRequired(Exception):
                     return await message.reply_text(_["call_12"])
                 if get.status in [
                     chatMemberStatus.BANNED,
